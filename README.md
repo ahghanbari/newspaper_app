@@ -10,10 +10,11 @@ articles app for creating database and creating tables for articles, almost whol
 
 for auth we used django.contrib.auth and no third party app.
 
-use:
+Run Django:
 ```bash
 python3 manage.py makemigrations;
 python3 manage.py migrate;
 python3 manage.py createsuperuser;
 python3 manage.py runserver;
 ```
+
