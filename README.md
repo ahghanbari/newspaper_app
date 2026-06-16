@@ -1,20 +1,50 @@
 
+# Newspaper App
 
-# A Newspaper website built with Django
+A Web App made using `django` framework. The frontend is made using `html` and `bootstrap` and `sqlite3` is used as the database. You can add articles which can be viewed by anyone. Just make an account and you are good to go.
 
-This Project written according to the "Django for Beginners by William S. Vincent"
+## Requirements
 
-pages app is for home page, also we write our test in this app.
+Python 3.8  
+Django 3.1
 
-articles app for creating database and creating tables for articles, almost whole the "views" written in this app.
+## Setting up the Project
 
-for auth we used django.contrib.auth and no third party app.
+  * Download and install Python 3.8
+  * Download and install Git.
+  * Clone the repository to your local machine `$ git clone https://github.com/ahghanbari/newspaper_app.git`
+  * Change directory to newspaper-app `$ cd newspaper_app`
+  * Install virtualenv `$ pip install virtualenv`  
+  * Create a virtual environment `$ python3 -m venv .venv`
+  * Activate the env: `$ source .venv/bin/activate`
+  * Install all requirements `$ pip install -r requirements.txt`
+  * Make migrations `$ python manage.py makemigrations`
+  * Migrate the changes to the database `$ python manage.py migrate`
+  * Create superuser `$ python manage.py createsuperuser`
+  * Run the server `$ python manage.py runserver`
+  
+## Deployment
+Here's a list of steps to be followed for deploying an app to heroku:
 
-Run Django:
-```bash
-python3 manage.py makemigrations;
-python3 manage.py migrate;
-python3 manage.py createsuperuser;
-python3 manage.py runserver;
-```
+  * Run pipenv lock to generate the appropriate Pipfile.lock `$ pipenv lock`
+  * Then create a Procfile which tells Heroku how to run the remote server where our code will live. `$ touch Procfile`
+  * For now we’re telling Heroku to use gunicorn as our production server and look in our <project-file-name>.wsgi file for further instructions. `Update Procfile with - web: gunicorn <project_name>.wsgi --log-file - `
+  * Next install [gunicorn](https://gunicorn.org) which we’ll use in production while still using Django’s internal server for local development use. `$ pipenv install gunicorn==19.9.0`
+  * Finally update ALLOWED_HOSTS with '*' in settings.py file.
+  * push the updates to the GitHub repository.
+  * Login to heroku. `$ heroku login`
+  * Create a new heroku app. `$ heroku create <app_name>`
+  * Set git to use the name of your new app when you push to Heroku. `$ heroku git:remote -a <app_name>`
+  * If there are no static files run `$ heroku config:set DISABLE_COLLECTSTATIC=1`
+  * Push the code to Heroku. `$ git push heroku master`
+  * Add free scaling so the app is actually running online. `$ heroku ps:scale web=1`
+
+## Contributing
+
+Feel free to raise a issue or make a pull request to fix a bug or add a new feature. If you are new to open source you can first read about git by [clicking here](https://www.codecademy.com/learn/learn-git).
+
+## Code Of Conduct
+
+Check the code of conduct [here](https://github.com/ahghanbari/newspaper_app/blob/master/CODE_OF_CONDUCT.md).
+
 

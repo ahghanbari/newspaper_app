@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="article-entry">
+   <!-- Back to top button -->
+
+    <!-- -->
+  <h2>{{ object.title }}</h2>
+    <p><i class="fa fa-user"></i> {{ object.author }} &nbsp;|&nbsp; <i class="fa fa-calendar"></i> {{ object.date }}</p>
+    <p>Updated at: {{ object.updated }}
+    <br>
+    <p>{{ object.body }}</p>
+    <img src="{{ object.pic.url}}" alt="NO IMAGE:(">
+  </div>
+  <br>
+  {% if object.author == user %}
+  <h5><a href="{% url 'article_edit' article.pk %}"><i class="fa fa-pencil"></i></a> |
+    <a href="{% url 'article_delete' article.pk %}"><i class="fa fa-trash"></i></a> | <a href="{% url 'comment_new' article.pk %}"><i class="fa fa-comments"></i></a></h5>
+
+  {% else %}
+
+    <h5><a href="{% url 'comment_new' article.pk %}"><i class="fa fa-comments"></i></a></h5>
+
+  {% endif %}
+  <br>
+  
+  <h4>Back to <a href="{% url 'article_list' %}"><i class="fa fa-home"></i></a></h4>
+{% endblock content %}
