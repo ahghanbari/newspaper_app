@@ -10,7 +10,7 @@ from PIL import Image
 class Article(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
-    pic = models.ImageField(upload_to='images/',default='IMG')
+    pic = models.ImageField(upload_to='images/')
     updated = models.DateTimeField(auto_now = True)
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
