@@ -4,6 +4,7 @@
 #Database
 *.sqlite3
 
+.venv/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
