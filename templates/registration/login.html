@@ -1,10 +1,30 @@
 <!-- templates/registration/login.html -->
-{% extends 'base.html' %} 
+
+{% extends 'base.html' %}
 {% block title %}Log In{% endblock title %}
 {% block content %}
-<h2>Log In</h2>
-<form method="post">
-  {% csrf_token %} {{ form.as_p }}
-  <button class="btn btn-success ml-2" type="submit">Log In</button>
-</form>
+  <div class="login">
+    {% load static %}
+    <img src="{% static 'img/login-bg.png' %}" alt="image" class="login__bg">
+    <form action="" class="login__form" method="post">
+    {% csrf_token %}
+      <h1 class="login__title">Login</h1>
+      <div class="login__inputs">
+          <div class="login__box">
+            <input name="username" id="id_username" placeholder="Email ID" required class="login__input">
+            <i class="ri-mail-fill"></i>
+          </div>
+          <div class="login__box">
+            <input name="password" id="id_password" type="password" placeholder="Password" required class="login__input">
+            <i class="ri-lock-2-fill"></i>
+          </div>
+      </div>
+      <div class="login__check">
+      </div>
+      <button type="submit" class="login__button">Login</button>
+      <div class="login__register">
+          Don't have an account? <a href="{% url 'signup' %}">Register</a>
+      </div>
+    </form>
+  </div>
 {% endblock content %}

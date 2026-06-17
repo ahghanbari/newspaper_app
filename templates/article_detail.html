@@ -1,9 +1,16 @@
 <!-- templates/article_detail.html -->
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
+  <h1 style="padding-top: 20px; padding-left: 20px">
+    Article Detail <i class="fa fa-arrow-circle-down"></i>
+  </h1>
+  <hr />
+  <br />
 <div class="article-entry">
   <h2>{{ object.title }}</h2>
   <p>by {{ object.author }} | {{ object.date }}</p>
+  <img style="width: 15vw;" src="{{ article.pic.url }}" alt="{{ article.title }}" class="card-img-top">
   <p>{{ object.body }}</p>
 </div>
 <p>
@@ -11,4 +18,5 @@
   <a href="{% url 'article_delete' article.pk %}">Delete</a>
 </p>
 <p>Back to <a href="{% url 'article_list' %}">All Articles</a>.</p>
+</div>
 {% endblock content %}
