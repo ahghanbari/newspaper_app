@@ -3,6 +3,23 @@
 
 A Web App made using `django` framework. The frontend is made using `html` and `bootstrap` and `sqlite3` is used as the database. You can add articles which can be viewed by anyone. Just make an account and you are good to go.
 
+<p align="center">
+  <img src="img1.jpg" width="100%"/>
+  <br>
+</p>
+
+<p align="center">
+  <img src="img2.jpg" width="100%"/>
+  <br>
+</p>
+
+<p align="center">
+  <img src="img3.jpg" width="100%"/>
+  <br>
+</p>
+
+<br>
+
 ## Requirements
 
 Python 3.8  
