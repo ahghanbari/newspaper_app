@@ -1,5 +1,5 @@
 
-# Newspaper App
+# Django News App
 
 A Web App made using `django` framework. The frontend is made using `html` and `bootstrap` and `sqlite3` is used as the database. You can add articles which can be viewed by anyone. Just make an account and you are good to go.
 
