@@ -29,8 +29,8 @@ Django 3.1
 
   * Download and install Python 3.8
   * Download and install Git.
-  * Clone the repository to your local machine `$ git clone https://github.com/ahghanbari/newspaper_app.git`
-  * Change directory to newspaper-app `$ cd newspaper_app`
+  * Clone the repository to your local machine `$ git clone https://github.com/ahghanbari/Django-News_App.git`
+  * Change directory to newspaper-app `$ cd Django_News_App`
   * Install virtualenv `$ pip install virtualenv`  
   * Create a virtual environment `$ python3 -m venv .venv`
   * Activate the env: `$ source .venv/bin/activate`
