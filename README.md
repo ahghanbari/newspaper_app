@@ -56,9 +56,7 @@ Here's a list of steps to be followed for deploying an app to heroku:
   * Push the code to Heroku. `$ git push heroku master`
   * Add free scaling so the app is actually running online. `$ heroku ps:scale web=1`
 
-## Contributing
+## Contribution
 
 Feel free to raise a issue or make a pull request to fix a bug or add a new feature.
-
-
 
