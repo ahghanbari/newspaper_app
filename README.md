@@ -58,7 +58,7 @@ Here's a list of steps to be followed for deploying an app to heroku:
 
 ## Contributing
 
-Feel free to raise a issue or make a pull request to fix a bug or add a new feature. If you are new to open source you can first read about git by [clicking here](https://www.codecademy.com/learn/learn-git).
+Feel free to raise a issue or make a pull request to fix a bug or add a new feature.
 
 
 
